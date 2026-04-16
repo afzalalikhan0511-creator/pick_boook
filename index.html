@@ -1,9 +1,16 @@
-<html>
-  <head>
-    <title>ai bot</title>
-  </head>
-  <script>
-    <script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watson Assistant Chat</title>
+</head>
+<body>
+
+<h2>IBM Watson Assistant Chat Integration</h2>
+<p>The chatbot will load automatically on this page.</p>
+
+<script>
   window.watsonAssistantChatOptions = {
     integrationID: "78a06d6d-ff5c-4e24-bb26-2030179480eb", // The ID of this integration.
     region: "au-syd", // The region your integration is hosted in.
@@ -11,10 +18,13 @@
     onLoad: async (instance) => { await instance.render(); }
   };
   setTimeout(function(){
-    const t=document.createElement('script');
-    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    const t = document.createElement('script');
+    t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" 
+            + (window.watsonAssistantChatOptions.clientVersion || 'latest') 
+            + "/WatsonAssistantChatEntry.js";
     document.head.appendChild(t);
   });
 </script>
-  </script>
+
+</body>
 </html>
